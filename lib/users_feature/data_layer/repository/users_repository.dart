@@ -8,8 +8,6 @@ class UsersRepository extends BaseUsersRepository {
   @override
   Future<List<User>> getUsers() async {
     List<User> users = [];
-    // Add some delay to apply loading
-    await Future.delayed(const Duration(seconds: 1));
     // make dummy users json
     List<Map<String, dynamic>> usersMap = [
       {

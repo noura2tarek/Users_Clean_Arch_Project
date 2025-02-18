@@ -17,6 +17,6 @@ class ServiceLocator {
 
     // Register Cubit class
     sl.registerFactory<UsersCubit>(() => UsersCubit(sl()));
-    log('done service');
+    log('Services done');
   }
 }

@@ -14,11 +14,14 @@ class UsersCubit extends Cubit<UsersState> {
 
   // Get context to return users cubit instance
   static UsersCubit get(context) => BlocProvider.of(context);
+
   List<User> users = [];
 
   // Get users
   Future<void> getUsersData() async {
     emit(UsersLoadingState());
+    // Add some delay to apply loading
+    await Future.delayed(const Duration(seconds: 1));
     users = await getUsersUseCase();
     emit(UsersSuccessState());
   }

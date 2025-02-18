@@ -27,28 +27,52 @@ class MyHomePage extends StatelessWidget {
           builder: (context, state) {
             final usersCubit = UsersCubit.get(context);
             List<User> users = usersCubit.users;
-            if (users.isEmpty) {
-              return const Center(
-                child: Text('No users data found'),
-              );
-            }
-            if (state is UsersLoadingState) {
+            if (state is UsersLoadingState && users.isEmpty) {
               return const Center(
                 child: CircularProgressIndicator(),
               );
             }
-            return ListView.separated(
-              itemBuilder: (context, index) {
-                var user = users[index];
-                return ListTile(
-                  title: Text(user.name),
-                  subtitle: Text(user.email),
-                );
-              },
-              separatorBuilder: (context, index) {
-                return const Divider();
-              },
-              itemCount: users.length,
+            if (users.isEmpty) {
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'No users data found',
+                      style: TextStyle(fontSize: 16.0),
+                    ),
+                    const SizedBox(
+                      height: 5.0,
+                    ),
+                    // Fetch data button
+                    // (Call get users data from cubit)
+                    OutlinedButton.icon(
+                      onPressed: () {
+                        usersCubit.getUsersData();
+                      },
+                      label: const Text('Fetch Data'),
+                      icon: const Icon(Icons.download),
+                    ),
+                  ],
+                ),
+              );
+            }
+            //---- Users List view ----//
+            return Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: ListView.separated(
+                itemBuilder: (context, index) {
+                  var user = users[index];
+                  return ListTile(
+                    title: Text(user.name),
+                    subtitle: Text(user.email),
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return const Divider();
+                },
+                itemCount: users.length,
+              ),
             );
           },
         ),
