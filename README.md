@@ -24,10 +24,11 @@ The structure is:
 **Domain Layer** contains (entities (user-entity), base repository, and use cases folders).    
 **Presentation Layer** contains (screens and users cubit folders).    
 
-Initialize Service locator class using init method in main file.
-We use a simple use case to get users data and return dummy list of users objects.     
-The home page contains list view of users data, which come after calling getUsersData method from
-cubit object using fetch data button.    
+Initialize Service locator class using init method in main file.                             
+We use a simple use case to get users data and return dummy list of users objects.                               
+The home page contains list view of users data, which come after calling getUsersData method from  
+cubit object using fetch data button (Outlined button in home).                    
+The cubit gets user data using getUsersUseCase paranmeter (inside the use case, the repository class is called and retutns the users data).   
 
 # Packages Used
 
