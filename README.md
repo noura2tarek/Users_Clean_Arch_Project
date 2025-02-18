@@ -11,18 +11,18 @@ layers.
 
 The structure is:
 
-- app folder: contains MyApp widget.       
-- core folder: contains base use case and service locator class to achieve dependency injection (using get_it package).    
-- users_feature: in this app, we have one feature so, the folder name is users feature instead of
+- **app folder**: contains MyApp widget.       
+- **core folder**: contains base use case and service locator class to achieve dependency injection (using get_it package).    
+- **users_feature**: in this app, we have one feature so, the folder name is users feature instead of
   features.       
   It contains:
-- Data Layer   
-- Domain Layer    
-- Presentation Layer    
+- Data Layer    
+- Domain Layer      
+- Presentation Layer      
 
-Data Layer contains (models(user-model) and concrete repository folders).             
-Domain Layer contains (entities (user-entity), base repository, and use cases folders).    
-Presentation Layer contains (screens and users cubit folders).    
+**Data Layer** contains (models(user-model) and concrete repository folders).             
+**Domain Layer** contains (entities (user-entity), base repository, and use cases folders).    
+**Presentation Layer** contains (screens and users cubit folders).    
 
 Initialize Service locator class using init method in main file.
 We use a simple use case to get users data and return dummy list of users objects.     
