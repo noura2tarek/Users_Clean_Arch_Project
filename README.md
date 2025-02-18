@@ -1,16 +1,40 @@
-# tasks_clean_arch_project
+# Clean_Arch_project
 
-A new Flutter project.
+# Description
 
-## Getting Started
+Implement Clean Architecture: Presentation Layer Logic with Dependency Injection
 
-This project is a starting point for a Flutter application.
+This Project made using a Clean Architecture structure with the data, domain, and presentation
+layers.
 
-A few resources to get you started if this is your first Flutter project:
+# Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The structure is:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- app folder: contains MyApp widget.       
+- core folder: contains base use case and service locator class to achieve dependency injection (using get_it package).    
+- users_feature: in this app, we have one feature so, the folder name is users feature instead of
+  features.       
+  It contains:
+- Data Layer   
+- Domain Layer    
+- Presentation Layer    
+
+Data Layer contains (models(user-model) and concrete repository folders).             
+Domain Layer contains (entities (user-entity), base repository, and use cases folders).    
+Presentation Layer contains (screens and users cubit folders).    
+
+Initialize Service locator class using init method in main file.
+We use a simple use case to get users data and return dummy list of users objects.     
+The home page contains list view of users data, which come after calling getUsersData method from
+cubit object using fetch data button.    
+
+# Packages Used
+
+equatable: For comparing objects and reduce memory space => https://pub.dev/packages/equatable.        
+flutter_bloc: For Bloc / cubit state management => https://pub.dev/packages/flutter_bloc.     
+get_it: to apply dependency injection and singleton pattern => https://pub.dev/packages/get_it.
+---------------------------------------------------
+
+The screens in lib/users_feature/presentation_layer/screens.      
+**The output images in images folder.**        
