@@ -35,6 +35,7 @@ The structure is:
 equatable: For comparing objects and reduce memory space => https://pub.dev/packages/equatable.        
 flutter_bloc: For Bloc / cubit state management => https://pub.dev/packages/flutter_bloc.     
 get_it: to apply dependency injection and singleton pattern => https://pub.dev/packages/get_it.
+
 ---------------------------------------------------
 
 The screens in lib/users_feature/presentation_layer/screens.      
