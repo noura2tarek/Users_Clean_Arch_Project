@@ -16,9 +16,9 @@ The structure is:
 - **users_feature**: in this app, we have one feature so, the folder name is users feature instead of
   features.       
   It contains:
- - Data Layer    
- - Domain Layer      
- - Presentation Layer      
+   - Data Layer    
+   - Domain Layer      
+   - Presentation Layer      
 
 **Data Layer** contains (models(user-model) and concrete repository folders).             
 **Domain Layer** contains (entities (user-entity), base repository, and use cases folders).    
