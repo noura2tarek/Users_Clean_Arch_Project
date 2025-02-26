@@ -2,7 +2,7 @@
 
 # Description
 
-Implement Clean Architecture: Presentation Layer Logic with Dependency Injection
+Users management project with Clean Architecture: Presentation Layer Logic with Dependency Injection
 
 This Project made using a Clean Architecture structure with the data, domain, and presentation
 layers.
