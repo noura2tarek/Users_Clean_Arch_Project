@@ -28,7 +28,17 @@ The structure is:
 - We use a simple use case to get users data and return dummy list of users objects.                               
 - The home page contains list view of users data, which come after calling getUsersData method from  
   cubit object using fetch data button (Outlined button in home).                    
-- The cubit gets user data using getUsersUseCase paranmeter (inside the use case, the repository class is called and retutns the users data).   
+- The cubit gets user data using getUsersUseCase paranmeter (inside the use case, the repository class is called and retutns the users data).
+
+---------------------------------------
+
+## How to Run
+
+1. Clone the repository.
+2. Run `flutter pub get` to install dependencies.
+3. Run `flutter run` to start the app.
+
+----------------------------
 
 # Packages Used
 
